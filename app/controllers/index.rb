@@ -56,3 +56,9 @@ post '/users' do
     erb :sign_up
   end
 end
+
+get '/user/:id' do
+  @user = User.find(params[:id])
+
+  erb :user_page
+end
